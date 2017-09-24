@@ -1,0 +1,29 @@
+{
+    "id": "org.gnu.MITScheme",
+    "branch": "9.2",
+    "runtime": "org.freedesktop.Platform",
+    "runtime-version": "1.6",
+    "sdk": "org.freedesktop.Sdk",
+    "modules": [
+        {
+            "name": "mit-scheme",
+            "sources": [
+                {
+                    "only-arches": ["x86_64"],
+                    "type": "archive",
+                    "url": "http://ftp.gnu.org/gnu/mit-scheme/stable.pkg/9.2/mit-scheme-9.2-x86-64.tar.gz",
+                    "sha256": "e408d45de0f3f14a86c5f719e5bcbb579338dcaea71609dc3209479061ef7fea"
+                },
+                {
+                    "only-arches": ["i386"],
+                    "type": "archive",
+                    "url": "http://ftp.gnu.org/gnu/mit-scheme/stable.pkg/9.2/mit-scheme-9.2-i386.tar.gz",
+                    "sha256": "86c9a300cd3766fbe798b4902d0e7df9b5a53d8152c13bd26ae5a8e2a0bdb4ba"
+                }
+            ],
+            "config-opts": ["--prefix=/app"],
+            "make-args": ["compile-microcode"],
+            "subdir": "src"
+        }
+    ]
+}
